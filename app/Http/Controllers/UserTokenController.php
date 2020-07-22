@@ -16,7 +16,6 @@ class UserTokenController extends Controller
             'device_name' => 'required',
         ]);
 
-        echo $request->get('email');
         /** @var User $user */
         $user = User::where('email', $request->get('email'))->first();
 
