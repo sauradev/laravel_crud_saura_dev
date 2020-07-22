@@ -3,7 +3,9 @@
 namespace Tests\Feature;
 
 use App\Category;
+use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
 
 class CategoryControllerTest extends TestCase
@@ -13,6 +15,10 @@ class CategoryControllerTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+
+        Sanctum::actingAs(
+            factory(User::class)->create()
+        );
     }
 
     public function test_index()

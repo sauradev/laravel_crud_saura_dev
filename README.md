@@ -21,3 +21,11 @@ Repaso general de Laravel, y creación de proyecto Base.
 php artisan test
 ### Para correr los seeders
 php artisan db:seed
+
+php artisan route:list
+
+### Sanctum
+composer require laravel/sanctum
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
+
